@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevHub Network - Code, Collaborate, Create</title>
+    <title>EarthGuardians - Protect Our Planet</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* 基础样式 */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', system-ui, sans-serif;
         }
 
         :root {
-            --primary: #24292e;
-            --secondary: #0366d6;
-            --accent: #28a745;
-            --light: #f6f8fa;
-            --dark: #1b1f23;
-            --text: #24292e;
+            --primary: #1a5d1a;
+            --secondary: #4CAF50;
+            --accent: #8BC34A;
+            --light: #f5f9f5;
+            --dark: #0d3b0d;
+            --text: #2c3e2c;
             --white: #ffffff;
-            --gray: #6a737d;
         }
 
         body {
@@ -30,119 +30,23 @@
             line-height: 1.6;
         }
 
-        header {
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
         .container {
             width: 90%;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
+            padding: 0 20px;
         }
 
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
-
-        .logo i {
-            font-size: 2rem;
-            color: var(--accent);
-        }
-
-        .logo span {
-            background: linear-gradient(to right, var(--accent), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 2rem;
-        }
-
-        nav ul li a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            padding: 0.5rem 0;
-            position: relative;
-        }
-
-        nav ul li a:hover {
-            color: var(--accent);
-        }
-
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--accent);
-            transition: width 0.3s ease;
-        }
-
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-
-        .hero {
-            background: linear-gradient(rgba(36, 41, 46, 0.9), rgba(36, 41, 46, 0.8)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: var(--white);
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            color: #d1d5da;
+        section {
+            padding: 60px 0;
         }
 
         .btn {
             display: inline-block;
-            background-color: var(--accent);
+            background-color: var(--primary);
             color: var(--white);
-            padding: 0.8rem 2rem;
-            border-radius: 6px;
+            padding: 12px 28px;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
@@ -152,292 +56,280 @@
         }
 
         .btn:hover {
-            background-color: var(--secondary);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            background-color: var(--dark);
+            transform: translateY(-2px);
         }
 
         .btn-secondary {
-            background-color: transparent;
-            border: 2px solid var(--accent);
-            margin-left: 1rem;
-        }
-
-        .btn-secondary:hover {
             background-color: var(--accent);
+            color: var(--dark);
         }
 
-        section {
-            padding: 5rem 0;
+        /* 头部样式 */
+        header {
+            background-color: var(--white);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
         }
 
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .logo i {
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+
+        /* 英雄区域 */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), 
+                        url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* 关于我们 */
         .section-title {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 40px;
         }
 
         .section-title h2 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             color: var(--primary);
-            margin-bottom: 1rem;
+            margin-bottom: 15px;
             position: relative;
             display: inline-block;
         }
 
-        .section-title h2::after {
+        .section-title h2:after {
             content: '';
             position: absolute;
             bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
+            width: 60px;
+            height: 3px;
             background-color: var(--accent);
-            border-radius: 2px;
         }
 
         .section-title p {
-            color: var(--gray);
-            max-width: 700px;
+            max-width: 600px;
             margin: 0 auto;
+            color: var(--text);
         }
 
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 50px;
             align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
         }
 
         .about-img {
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .about-img img {
             width: 100%;
             height: auto;
             display: block;
-            transition: transform 0.5s ease;
         }
 
-        .about-img:hover img {
-            transform: scale(1.05);
-        }
-
-        .about-text h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-            color: var(--text);
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 2rem 1rem;
+        /* 核心价值 */
+        .values {
             background-color: var(--white);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 30px 20px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            background-color: var(--light);
             transition: transform 0.3s ease;
         }
 
-        .stat-item:hover {
+        .value-card:hover {
             transform: translateY(-10px);
         }
 
-        .stat-item i {
+        .value-card i {
             font-size: 2.5rem;
-            color: var(--secondary);
-            margin-bottom: 1rem;
+            color: var(--primary);
+            margin-bottom: 20px;
         }
 
-        .stat-item h3 {
-            font-size: 2.5rem;
+        .value-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
             color: var(--dark);
-            margin-bottom: 0.5rem;
         }
 
-        .stat-item p {
-            color: var(--gray);
-        }
-
-        .projects {
-            background-color: var(--white);
-        }
-
+        /* 项目展示 */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
         }
 
         .project-card {
-            background-color: var(--light);
             border-radius: 10px;
             overflow: hidden;
+            background-color: var(--white);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-            border: 1px solid #e1e4e8;
         }
 
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        .project-img {
+            height: 200px;
+            overflow: hidden;
         }
 
-        .project-header {
-            padding: 1.5rem;
-            border-bottom: 1px solid #e1e4e8;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
         }
 
-        .project-title {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .project-title i {
-            color: var(--accent);
-            font-size: 1.2rem;
-        }
-
-        .project-title h3 {
-            font-size: 1.3rem;
-            color: var(--dark);
-        }
-
-        .project-badge {
-            background-color: var(--accent);
-            color: white;
-            padding: 0.2rem 0.6rem;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            font-weight: 600;
+        .project-card:hover .project-img img {
+            transform: scale(1.05);
         }
 
         .project-content {
-            padding: 1.5rem;
+            padding: 25px;
         }
 
-        .project-content p {
-            margin-bottom: 1.5rem;
-            color: var(--gray);
+        .project-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--dark);
         }
 
-        .project-footer {
-            display: flex;
-            justify-content: space-between;
-            padding: 0 1.5rem 1.5rem;
-        }
-
-        .project-lang {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .lang-color {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #f1e05a;
-        }
-
-        .lang-color.js {
-            background-color: #f1e05a;
-        }
-
-        .lang-color.py {
-            background-color: #3572A5;
-        }
-
-        .lang-color.java {
-            background-color: #b07219;
-        }
-
-        .lang-color.html {
-            background-color: #e34c26;
-        }
-
-        .project-stats {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .project-stat {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            color: var(--gray);
-            font-size: 0.9rem;
-        }
-
+        /* 号召行动 */
         .cta {
-            background: linear-gradient(to right, var(--primary), var(--dark));
+            background-color: var(--primary);
             color: var(--white);
             text-align: center;
-            padding: 5rem 0;
+            padding: 70px 0;
         }
 
         .cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
         }
 
         .cta p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
             max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            color: #d1d5da;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            opacity: 0.9;
         }
 
         .cta .btn {
-            background-color: var(--accent);
-            color: var(--white);
+            background-color: var(--white);
+            color: var(--primary);
         }
 
         .cta .btn:hover {
-            background-color: var(--secondary);
+            background-color: var(--accent);
         }
 
+        /* 页脚 */
         footer {
             background-color: var(--dark);
             color: var(--white);
-            padding: 3rem 0 1rem;
+            padding: 50px 0 20px;
         }
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-bottom: 2rem;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
         }
 
         .footer-column h3 {
             font-size: 1.3rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 20px;
             position: relative;
             padding-bottom: 10px;
         }
 
-        .footer-column h3::after {
+        .footer-column h3:after {
             content: '';
             position: absolute;
             bottom: 0;
@@ -447,37 +339,39 @@
             background-color: var(--accent);
         }
 
-        .footer-column p {
-            margin-bottom: 1rem;
-            color: #d1d5da;
-        }
-
         .footer-links {
             list-style: none;
         }
 
         .footer-links li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 10px;
         }
 
         .footer-links li a {
-            color: #d1d5da;
+            color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: color 0.3s ease;
         }
 
         .footer-links li a:hover {
             color: var(--accent);
-            padding-left: 5px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .social-links {
             display: flex;
-            gap: 1rem;
+            gap: 15px;
+            margin-top: 20px;
         }
 
         .social-links a {
-            display: inline-flex;
+            display: flex;
             align-items: center;
             justify-content: center;
             width: 40px;
@@ -496,15 +390,18 @@
 
         .copyright {
             text-align: center;
-            padding-top: 2rem;
+            padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #8b949e;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
         }
 
+        /* 移动端适配 */
         .mobile-menu {
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
+            color: var(--primary);
         }
 
         @media (max-width: 992px) {
@@ -512,26 +409,22 @@
                 grid-template-columns: 1fr;
             }
             
-            .projects-grid {
+            .values-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
             }
             
             .footer-content {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr 1fr;
             }
         }
 
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
+                font-size: 2.2rem;
             }
             
             nav ul {
@@ -540,11 +433,11 @@
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background-color: var(--primary);
+                background-color: var(--white);
                 flex-direction: column;
-                padding: 1rem 0;
+                padding: 20px 0;
                 text-align: center;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
             }
             
             nav ul.active {
@@ -553,59 +446,31 @@
             
             nav ul li {
                 margin: 0;
-                padding: 0.8rem 0;
+                padding: 12px 0;
             }
             
             .mobile-menu {
                 display: block;
             }
             
-            .projects-grid {
+            .values-grid {
                 grid-template-columns: 1fr;
             }
             
             .footer-content {
                 grid-template-columns: 1fr;
+                gap: 30px;
             }
-            
-            .stats {
-                grid-template-columns: 1fr;
-            }
-            
-            .btn-container {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .btn-secondary {
-                margin-left: 0;
-            }
-        }
-
-        /* Animation for stats counter */
-        .counter {
-            transition: all 0.5s ease;
-        }
-        
-        .repo-link {
-            color: var(--secondary);
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        .repo-link:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- 头部 -->
     <header>
-        <div class="container nav-container">
+        <div class="container header-container">
             <div class="logo">
-                <i class="fab fa-github"></i>
-                <span>DevHub Network</span>
+                <i class="fas fa-leaf"></i>
+                <span>EarthGuardians</span>
             </div>
             <nav>
                 <div class="mobile-menu">
@@ -614,255 +479,158 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#values">Values</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#get-involved">Contribute</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- 英雄区域 -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h1>Code, Collaborate, Create</h1>
-            <p>Join a global community of developers building open-source solutions for tomorrow's challenges.</p>
-            <div class="btn-container">
-                <a href="#projects" class="btn">Explore Projects</a>
-                <a href="#get-involved" class="btn btn-secondary">Contribute Now</a>
-            </div>
+            <h1>Together for a Greener Tomorrow</h1>
+            <p>We are a global community dedicated to protecting natural ecosystems and promoting sustainable living for all.</p>
+            <a href="#projects" class="btn">Explore Our Work</a>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- 关于我们 -->
     <section id="about">
         <div class="container">
             <div class="section-title">
-                <h2>About DevHub Network</h2>
-                <p>We are a global community of developers collaborating on open-source projects that make a difference.</p>
+                <h2>About EarthGuardians</h2>
+                <p>Founded in 2015, we work to protect our planet through direct action and community empowerment.</p>
             </div>
             <div class="about-content">
-                <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" alt="Developers collaborating">
-                </div>
                 <div class="about-text">
-                    <h3>Our Mission</h3>
-                    <p>DevHub Network connects developers worldwide to collaborate on meaningful open-source projects. We believe in the power of community-driven development to solve real-world problems.</p>
-                    <p>Founded in 2015, we've grown from a small GitHub organization to a global network with thousands of contributors across 80+ countries.</p>
-                    <p>Our approach combines mentorship for new developers, collaborative coding sessions, and hackathons to foster innovation and skill development.</p>
-                    <a href="#" class="btn">Join Our Community</a>
+                    <h3>Our Commitment to the Planet</h3>
+                    <p>EarthGuardians began as a small group of environmental activists and has grown into an international network with members in over 80 countries. Our focus is on practical, scalable solutions to environmental challenges.</p>
+                    <p>We believe that real change happens when communities are empowered with knowledge and resources. That's why we prioritize education and local initiatives alongside larger conservation projects.</p>
+                    <p>Our work spans reforestation, wildlife protection, clean energy advocacy, and sustainable agriculture, always with a focus on measurable impact.</p>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
                 </div>
-            </div>
-            <div class="stats">
-                <div class="stat-item">
-                    <i class="fab fa-github"></i>
-                    <h3 class="counter" data-target="1250">0</h3>
-                    <p>Open Source Projects</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-code-branch"></i>
-                    <h3 class="counter" data-target="8500">0</h3>
-                    <p>Contributors</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-code"></i>
-                    <h3 class="counter" data-target="4200000">0</h3>
-                    <p>Lines of Code</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-globe"></i>
-                    <h3 class="counter" data-target="85">0</h3>
-                    <p>Countries</p>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Team working on environmental project">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
+    <!-- 核心价值 -->
+    <section class="values" id="values">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Core Values</h2>
+                <p>These principles guide everything we do at EarthGuardians</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Community Focus</h3>
+                    <p>We believe sustainable change begins at the local level, empowering communities to protect their own environments.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Ecosystem Integrity</h3>
+                    <p>Protecting and restoring natural ecosystems is fundamental to our mission and all our projects.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovative Solutions</h3>
+                    <p>We embrace new technologies and approaches to solve environmental challenges more effectively.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目展示 -->
+    <section id="projects">
         <div class="container">
             <div class="section-title">
                 <h2>Featured Projects</h2>
-                <p>Discover some of our most popular open-source projects looking for contributors.</p>
+                <p>Current initiatives making a difference worldwide</p>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-title">
-                            <i class="fab fa-js-square"></i>
-                            <h3>React Dashboard</h3>
-                        </div>
-                        <span class="project-badge">JavaScript</span>
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Forest conservation">
                     </div>
                     <div class="project-content">
-                        <p>A comprehensive admin dashboard built with React, Redux, and Material-UI. Features real-time analytics, user management, and customizable widgets.</p>
-                        <a href="#" class="repo-link">View Repository →</a>
-                    </div>
-                    <div class="project-footer">
-                        <div class="project-lang">
-                            <div class="lang-color js"></div>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-stats">
-                            <div class="project-stat">
-                                <i class="fas fa-star"></i>
-                                <span>1.2k</span>
-                            </div>
-                            <div class="project-stat">
-                                <i class="fas fa-code-branch"></i>
-                                <span>342</span>
-                            </div>
-                        </div>
+                        <h3>Forest Guardians Program</h3>
+                        <p>Training and supporting local communities to protect and restore native forests in vulnerable regions.</p>
+                        <a href="#" class="btn btn-secondary">Learn More</a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-title">
-                            <i class="fab fa-python"></i>
-                            <h3>ML Toolkit</h3>
-                        </div>
-                        <span class="project-badge">Python</span>
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1536939459926-301728717817?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Solar panels">
                     </div>
                     <div class="project-content">
-                        <p>A machine learning toolkit for data scientists. Includes pre-processing pipelines, model evaluation utilities, and visualization tools for common ML workflows.</p>
-                        <a href="#" class="repo-link">View Repository →</a>
-                    </div>
-                    <div class="project-footer">
-                        <div class="project-lang">
-                            <div class="lang-color py"></div>
-                            <span>Python</span>
-                        </div>
-                        <div class="project-stats">
-                            <div class="project-stat">
-                                <i class="fas fa-star"></i>
-                                <span>2.5k</span>
-                            </div>
-                            <div class="project-stat">
-                                <i class="fas fa-code-branch"></i>
-                                <span>589</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-title">
-                            <i class="fab fa-java"></i>
-                            <h3>EduPlatform API</h3>
-                        </div>
-                        <span class="project-badge">Java</span>
-                    </div>
-                    <div class="project-content">
-                        <p>A RESTful API for educational platforms. Features include course management, user authentication, progress tracking, and integration with learning tools.</p>
-                        <a href="#" class="repo-link">View Repository →</a>
-                    </div>
-                    <div class="project-footer">
-                        <div class="project-lang">
-                            <div class="lang-color java"></div>
-                            <span>Java</span>
-                        </div>
-                        <div class="project-stats">
-                            <div class="project-stat">
-                                <i class="fas fa-star"></i>
-                                <span>845</span>
-                            </div>
-                            <div class="project-stat">
-                                <i class="fas fa-code-branch"></i>
-                                <span>201</span>
-                            </div>
-                        </div>
+                        <h3>Solar for Communities</h3>
+                        <p>Providing affordable solar energy solutions to off-grid communities, reducing fossil fuel dependence.</p>
+                        <a href="#" class="btn btn-secondary">Learn More</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta" id="get-involved">
+    <!-- 号召行动 -->
+    <section class="cta">
         <div class="container">
-            <h2>Start Contributing Today</h2>
-            <p>Whether you're a seasoned developer or just starting out, there's a place for you in our community. Help build the future of open-source software.</p>
-            <a href="#" class="btn">Find Your First Issue</a>
+            <h2>Join Our Mission</h2>
+            <p>Your support helps us protect vital ecosystems, support sustainable communities, and advocate for environmental policies. Together we can create lasting change.</p>
+            <a href="#contact" class="btn">Become a Supporter</a>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- 页脚 -->
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>DevHub Network</h3>
-                    <p>Connecting developers worldwide to build impactful open-source software through collaboration and community.</p>
+                    <h3>EarthGuardians</h3>
+                    <p>Protecting our planet through community action, conservation, and sustainable solutions since 2015.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-dev"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#values">Our Values</a></li>
                         <li><a href="#projects">Projects</a></li>
-                        <li><a href="#get-involved">Contribute</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Resources</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Getting Started Guide</a></li>
-                        <li><a href="#">Code of Conduct</a></li>
-                        <li><a href="#">Contributor Handbook</a></li>
-                        <li><a href="#">Project Ideas</a></li>
-                        <li><a href="#">Mentorship Program</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> San Francisco, CA</p>
-                    <p><i class="fas fa-envelope"></i> hello@devhubnetwork.org</p>
-                    <p><i class="fab fa-github"></i> github.com/devhubnetwork</p>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contact@earthguardians.org</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Greenway Blvd, Portland, OR</p>
+                    </div>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 DevHub Network. All open-source projects are licensed under MIT.</p>
+                <p>&copy; 2025 EarthGuardians. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
+        // 移动端菜单切换
         document.querySelector('.mobile-menu').addEventListener('click', function() {
             document.querySelector('nav ul').classList.toggle('active');
         });
 
-        // Counter Animation
-        function animateCounters() {
-            const counters = document.querySelectorAll('.counter');
-            const speed = 200; // The lower the slower
-            
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-                
-                const inc = target / speed;
-                
-                if(count < target) {
-                    counter.innerText = Math.ceil(count + inc);
-                    setTimeout(animateCounters, 1);
-                } else {
-                    counter.innerText = target.toLocaleString();
-                }
-            });
-        }
-
-        // Initialize counters when page loads
-        window.addEventListener('load', animateCounters);
-
-        // Smooth scrolling for navigation links
+        // 平滑滚动
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -877,33 +645,20 @@
                         behavior: 'smooth'
                     });
                     
-                    // Close mobile menu if open
+                    // 移动端点击后关闭菜单
                     document.querySelector('nav ul').classList.remove('active');
                 }
             });
         });
-        
-        // Add animation to project cards on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-        
-        // Observe project cards
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            observer.observe(card);
+
+        // 简单的滚动效果
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.05)';
+            }
         });
     </script>
 </body>
